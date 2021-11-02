@@ -1,6 +1,7 @@
 from faker import Faker
 
 import random
+print('tata')
 
 class Player:
     def __init__(self,
