@@ -1,4 +1,5 @@
 from faker import Faker
+
 import random
 
 class Player:
@@ -36,7 +37,7 @@ class Player:
             self.gender = 'F'
             self.name = fake.name_female()
 
-
+    print('toto')
     def make_players(pn,random_tournament):
         players_temp = []
         for i in range(pn):
