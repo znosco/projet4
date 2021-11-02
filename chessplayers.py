@@ -65,5 +65,5 @@ class Player:
             for i in range(pn):
                 players[i].name_elo = f"{players[i].name} ({players[i].elo})"
         make_name_elo(players)
-
+        print('titi')
         return players
