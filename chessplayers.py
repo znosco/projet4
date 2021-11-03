@@ -1,7 +1,5 @@
 from faker import Faker
-
 import random
-print('tata')
 
 class Player:
     def __init__(self,
@@ -14,6 +12,7 @@ class Player:
                  gender, 
                  birth,
                  name_elo,
+                 rank
                  ):
         self.birth= birth
         self.name = name
@@ -24,6 +23,7 @@ class Player:
         self.score_after_last_game = score_after_last_game
         self.opponent = opponent
         self.name_elo = name_elo
+        self.rank = rank
     
     def make_fake_list_attributs(self):
         fake = Faker(['fr_FR'])
@@ -38,7 +38,6 @@ class Player:
             self.gender = 'F'
             self.name = fake.name_female()
 
-    print('toto')
     def make_players(pn,random_tournament):
         players_temp = []
         for i in range(pn):
@@ -51,6 +50,7 @@ class Player:
                             gender='', 
                             birth='',
                             name_elo='',
+                            rank= []
                             )
             if random_tournament == True:
                 player.make_fake_list_attributs()
@@ -67,5 +67,4 @@ class Player:
             for i in range(pn):
                 players[i].name_elo = f"{players[i].name} ({players[i].elo})"
         make_name_elo(players)
-        print('titi')
         return players

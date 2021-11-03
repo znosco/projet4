@@ -1,5 +1,19 @@
 from tinydb import TinyDB
 
+
+
+def save_tournament(place, date, game_type):
+    tournament_table = TinyDB('tournament_table.json')
+    tournament_table.truncate() # clear the table first 
+    serialized_tournament = {'lieu'          : place,
+                             'date'          : date,
+                             'cadence de jeu': game_type
+                            }
+    tournament_table.insert(serialized_tournament)
+    return tournament_table
+
+
+
 def save_players(players):
     players_table = TinyDB('players_table.json')
     players_table.truncate() # clear the table first
@@ -12,6 +26,7 @@ def save_players(players):
         }
 
         players_table.insert(serialized_player)
+    return players_table
 
 def save_games(rounds,games,rounds_in_tournament,games_in_round):
     games_table = TinyDB('games_table.json')
@@ -25,72 +40,18 @@ def save_games(rounds,games,rounds_in_tournament,games_in_round):
             'joueurs'            : f"{rounds[i].pairing_players[j][0].name_elo} -contre- {rounds[i].pairing_players[j][1].name_elo}",
             'résultat de la partie': f"({rounds[i].pairing_players[j][0].score_game}-{rounds[i].pairing_players[j][1].score_game})"
             }
-    games_table.insert(serialized_games)
+            games_table.insert(serialized_games)
+    return games_table
 
-
-
-
-
-"""
-
-for key,value in games.tables.items():
-                after_round.add_row(str(key), value[0].name_elo, 
-                str(value[0].score_after_last_game),
-                 f"({rounds.pairing_players[i][0].score_game}-{rounds.pairing_players[i][1].score_game})", 
-                 value[1].name_elo, str(value[1].score_after_last_game))
-                i+=1
-
-
-
-
-    print()
-    print('affiche tout \n')
-    print(players_table.all(),'\n')
-
-    print('affiche que les noms\n')
-    for item in players_table:
-        print(item['name'])
-       
-"""
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-"""
-class Player:
-def __init__(self, name, age):
-self.name = name
- self.age = age
-player = Player(name='John', age=22)
-Je peux sérialiser l'instance comme ceci :
-serialized_player = {
- 'name': player.name, 
- 'age': player.age
-}
-Une instance sérialisée peut être reconvertie en une instance comme suit :
-name = serialized_player['name']
-age = serialized_player['age']
-player = Player(name=name, age=age)
-Pour sauvegarder plusieurs joueurs en utilisant TinyDB, tu dois d'abord sérialiser 
-toutes les instances de joueurs, puis les charger dans la table des joueurs comme 
-ceci :
-from tinydb import TinyDB
-db = TinyDB(‘db.json’)
-players_table = db.table(‘players’)
-players_table.truncate() # clear the table first
-players_table.insert_multiple(serialized_players)
-Pour recharger les joueurs sérialisés, tu peux faire ceci :
-serialized_players = players_table.all()
-
-"""
-
+def save_results(players, rounds, rounds_in_tournament, pn):
+    results_table = TinyDB('results_table.json')
+    results_table.truncate() # clear the table first
+    for j in range(rounds_in_tournament):
+        for i in range(pn):
+            serialized_results = {
+            'numéro de la ronde:': j+1,
+            'joueurs'            : players[i].name_elo,
+            'classement'         : players[i].rank[j]
+            }
+            results_table.insert(serialized_results)
+    return results_table

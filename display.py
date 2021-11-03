@@ -45,11 +45,11 @@ class Display:
         after_round.add_column("score", style="dim", width=12)
         i=0
         for key,value in games.tables.items():
-                after_round.add_row(str(key), value[0].name_elo, 
-                str(value[0].score_after_last_game),
-                 f"({rounds.pairing_players[i][0].score_game}-{rounds.pairing_players[i][1].score_game})", 
-                 value[1].name_elo, str(value[1].score_after_last_game))
-                i+=1
+            after_round.add_row(str(key), value[0].name_elo, 
+            str(value[0].score_after_last_game),
+             f"({rounds.pairing_players[i][0].score_game}-{rounds.pairing_players[i][1].score_game})", 
+             value[1].name_elo, str(value[1].score_after_last_game))
+            i+=1
         console.print(after_round)
 
         print()       
@@ -69,4 +69,5 @@ class Display:
                 if same_score == False:
                     j=i+1 
             result.add_row(str(j),players_temp[i].name_elo,str(players_temp[i].score_after_last_game))
+            players_temp[i].rank.append(j)
         console.print(result)
