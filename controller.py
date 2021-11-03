@@ -3,7 +3,7 @@ class Controller:
     player_no_play_list = []
     move_player = ''
 
-    def manage_odd_nomber_players(players, rounds, pn, played=False):
+    def manage_odd_nomber_players(players, rounds, pn, round_number, games_in_round, played=False):
         if pn % 2 == 0:
             pass
         else:
@@ -36,7 +36,7 @@ class Controller:
     def manage_user_main():
         select_pn = False
         while select_pn == False:
-            pn = input("veuillez entrer le nombre de joueurs (un nombre entre 4 et 10000)")
+            pn = input("veuillez entrer le nombre de joueurs (un nombre entre 4 et 100000)")
             try: 
                 pn = int(pn)
                 if pn >=4 :
@@ -74,3 +74,25 @@ class Controller:
             game_type = time_control[select_key]
 
         return game_type, place, date
+
+    def verify_data(tournament_table, players_table, games_table, results_table):
+        choice = input("voulez-vous inspecter les données sauvegardées? \
+            \n entrez 'y ou Y' pour yes")
+        if choice.lower() == "y":
+            print()
+            print('affiche la sauvegarde "tournoi" \n')
+            print(tournament_table.all(),'\n')
+            print()
+            print('affiche la sauvegarde "joueurs" \n')
+            print()
+            for item in players_table:
+                print(item)
+            print()
+            print('affiche tout "les parties" \n')
+            print()
+            for item in games_table:
+                print(item)
+            print()
+            print('affiche tout "résultats par ronde" \n')
+            for item in results_table:
+                print(item)

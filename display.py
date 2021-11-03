@@ -4,6 +4,7 @@ class Display:
         
     def print_welcome(players, console, round_number, pn):
         if round_number == 1:
+            print()
             print("-----Bienvenue aux Tournoi international d'échecs OPENCLASSROOMS----- \n")
             print(f"---------------------- {pn} particitants-----------------------------\n")
 
@@ -13,6 +14,7 @@ class Display:
             for i in range (pn):
                 welcome.add_row(players[i].name_elo, players[i].birth)
             console.print(welcome)
+        wait = input('appuyer sur une touche pour continuer')
 
     def pairing_before_round(players, games, console, round_number):
         print()
@@ -28,6 +30,7 @@ class Display:
             value[0].name_elo, str(value[0].score_after_last_game), 
             value[1].name_elo, str(value[1].score_after_last_game))
         console.print(before_round)
+        wait = input('appuyer sur une touche pour continuer')
 
     def print_score_after_last_round(players, games, rounds, console, round_number, pn):
         players_temp = sorted(players, 
@@ -71,3 +74,4 @@ class Display:
             result.add_row(str(j),players_temp[i].name_elo,str(players_temp[i].score_after_last_game))
             players_temp[i].rank.append(j)
         console.print(result)
+        wait = input('appuyer sur une touche pour continuer')

@@ -38,10 +38,10 @@ for i in range(rounds_in_tournament):
     #played = Controller.reset_round()
     rounds[i].pairing(players,games_in_round,round_number,pn)
     games[i].make_tables(players,rounds[i],games_in_round,round_number)
-    Controller.manage_odd_nomber_players(players, rounds[i], pn)
+    Controller.manage_odd_nomber_players(players, rounds[i], pn, round_number, games_in_round)
     Display.pairing_before_round(players, games[i], console, round_number)
     Game.players_score(players,rounds[i],games_in_round)
-    Controller.manage_odd_nomber_players(players, rounds[i], pn, played=True)
+    Controller.manage_odd_nomber_players(players, rounds[i], pn, round_number, games_in_round, played=True)
     Display.print_score_after_last_round(players, games[i], rounds[i], console ,round_number, pn)
     round_number += 1
 #save data and verify    

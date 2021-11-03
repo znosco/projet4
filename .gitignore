@@ -1,1 +1,5 @@
 env/
+players_table.json
+tournament_table.json
+results_table.json
+games_table.json
