@@ -43,7 +43,7 @@ class Player:
         for i in range(pn):
             player = Player(name='', 
                             elo=0,
-                            score_game=0,
+                            score_game=[],
                             score_after_last_game=0,
                             opponent=[], 
                             ranking=0, 

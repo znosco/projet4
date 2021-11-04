@@ -11,6 +11,7 @@ class Controller:
                 if played == True:
                     print(f'le joueur {players[pn-1].name_elo} ne joue pas cette ronde et gagne 1 point')
                     players[pn-1].score_after_last_game += 1
+                    players[pn-1].score_game.append(1)
                     Controller.move_player = players[pn-1]
 
             else:
@@ -25,6 +26,7 @@ class Controller:
                                 Controller.no_play = rounds.pairing_players[i][j].name_elo
                                 Controller.move_player.opponent.remove(rounds.pairing_players[i][j].name)
                                 rounds.pairing_players[i][j].score_after_last_game +=1
+                                rounds.pairing_players[i][j].score_game.append(1)
                                 rounds.pairing_players[i].insert(j,Controller.move_player)
                                 del rounds.pairing_players[i][j+1]
                                 find = True

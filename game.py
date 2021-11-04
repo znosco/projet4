@@ -12,8 +12,8 @@ class Game:
         return game_list
 
     def players_score(players,rounds,games_in_round):
+        
         for i in range(games_in_round):
-
             # for random gain
             cast_point = random.randrange(1,4)
             if cast_point == 1:
@@ -37,9 +37,9 @@ class Game:
                 cast_point_black = 1
 
             # add points 
-            rounds.pairing_players[i][0].score_game = cast_point_white
+            rounds.pairing_players[i][0].score_game.append(cast_point_white)
             rounds.pairing_players[i][0].score_after_last_game += cast_point_white
-            rounds.pairing_players[i][1].score_game = cast_point_black
+            rounds.pairing_players[i][1].score_game.append(cast_point_black)
             rounds.pairing_players[i][1].score_after_last_game += cast_point_black
     
 

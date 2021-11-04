@@ -50,7 +50,7 @@ class Display:
         for key,value in games.tables.items():
             after_round.add_row(str(key), value[0].name_elo, 
             str(value[0].score_after_last_game),
-             f"({rounds.pairing_players[i][0].score_game}-{rounds.pairing_players[i][1].score_game})", 
+             f"({value[0].score_game[round_number-1]}-{value[1].score_game[round_number-1]})", 
              value[1].name_elo, str(value[1].score_after_last_game))
             i+=1
         console.print(after_round)
