@@ -13,7 +13,7 @@ By trying to be as close to reality as possible.
 ### b) The Chessplayers class:
 >It creates a list of instances of the Chessplayers class.
 >The list is sorted by descending order.
-Attributes :
+>Attributes :
 - name
 - elo (ranking that reflects the strength of the player)
 - score_game
@@ -47,13 +47,13 @@ Attributes :
 - The pairing of players (table number, opponent, score, elo)
 - The results of the round (results of the games)
 - The player who is exempt from playing in case of an odd number of players
--The score and the classification after the round
+- The score and the classification after the round
 
 ### g) The Data file
 >Save tournament data in JSON format.
 
 
-to create the virtual environment(window's users):
+## to create the virtual environment(window's users):
 ```sh
 python -m venv env
 pip install -r requirements.txt
