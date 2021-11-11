@@ -65,3 +65,8 @@ for use the code:
 ```sh
 python main.py
 ```
+for use flake8:
+```sh
+flake8 main.py chessplayers.py controller.py display.py game.py rounds.py   --format=html --htmldir=flakereport --max-line-length 105
+```
+
