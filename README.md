@@ -13,6 +13,7 @@
 ### b) The Chessplayers class:
 >It creates a list of instances of the Chessplayers class.
 >The list is sorted by descending order.
+>
 >Attributes :
 - name
 - elo (ranking that reflects the strength of the player)
