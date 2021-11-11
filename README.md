@@ -8,10 +8,10 @@ By trying to be as close to reality as possible.
 2) The different classes / files and their functions
 
 a) The main.py file:
-This is the main program, it manages the execution and the order of the various events.
+>This is the main program, it manages the execution and the order of the various events.
  
 b) The Chessplayers class:
-It creates a list of instances of the Chessplayers class.
+>It creates a list of instances of the Chessplayers class.
 The list is sorted by descending order.
 Attributes :
 - name
