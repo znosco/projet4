@@ -1,6 +1,6 @@
 # projet4
 
-1) Presentation:
+##1) Presentation:
 
 The goal of this project is to create a chess tournament with any number of players (even or odd) and any rounds.
 By trying to be as close to reality as possible.
