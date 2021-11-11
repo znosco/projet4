@@ -45,7 +45,7 @@
 - The list of players
 - For each round:
 - The pairing of players (table number, opponent, score, elo)
-- The results of the round (results of the games)
+- The results of the round (results of each games)
 - The player who is exempt from playing in case of an odd number of players
 - The score and the classification after the round
 
