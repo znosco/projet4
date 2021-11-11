@@ -25,20 +25,20 @@ Attributes :
 - rank
 
  ### c) The Rounds class:
-- It manages the pairing of players:
- -->1st round: The players are matched according to their elo (Swiss system).
- -->Next round: The players are paired:
-- who have not played together (each player checks that their opponent is on their 'opponent' list, this list is updated with each pairing)
-- according to the scores, the program tries to find the combination which corresponds to the smallest difference in points between each player.
+> It manages the pairing of players:
+ - 1st round: The players are matched according to their elo (Swiss system).
+ - Next round: The players are paired:
+-- who have not played together (each player checks that their opponent is on their 'opponent' list, this list is updated with each pairing)
+-- according to the scores, the program tries to find the combination which corresponds to the smallest difference in points between each player.
 
 ### d) The Game class:
-- It manages the results of the games, the scores and the game tables
--The result of a game is generated randomly but also depends on the strength of each player.
--The pairs of matched Players are ranked by score, the best players play table1, ect ..
+> It manages the results of the games, the scores and the game tables
+> The result of a game is generated randomly but also depends on the strength of each player.
+> The pairs of matched Players are ranked by score, the best players play table1, ect ..
  
 ### e) The Controller class:
->Pairings are designed for a number of even players, the Controller class manages (alone), the case where the number of players is odd.
->It also manages user choices and allows verification of recorded data.
+> Pairings are designed for a number of even players, the Controller class manages (alone), the case where the number of players is odd.
+> It also manages user choices and allows verification of recorded data.
 
 ### f) The Display class;
 >It displays:
