@@ -2,8 +2,8 @@
 
 ## 1) Presentation:
 
-The goal of this project is to create a chess tournament with any number of players (even or odd) and any rounds.
-By trying to be as close to reality as possible.
+>The goal of this project is to create a chess tournament with any number of players (even or odd) and any rounds.
+>By trying to be as close to reality as possible.
 
 ## 2) The different classes / files and their functions:
 
@@ -51,7 +51,6 @@ By trying to be as close to reality as possible.
 
 ### g) The Data file
 >Save tournament data in JSON format.
-
 
 ## to create the virtual environment(window's users):
 ```sh
