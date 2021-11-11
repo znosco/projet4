@@ -10,7 +10,6 @@ class Player:
         score_game,
         score_after_last_game,
         opponent,
-        ranking,
         gender,
         birth,
         name_elo,
@@ -21,7 +20,6 @@ class Player:
         self.gender = gender
         self.elo = elo
         self.score_game = score_game
-        self.ranking = ranking
         self.score_after_last_game = score_after_last_game
         self.opponent = opponent
         self.name_elo = name_elo
@@ -49,7 +47,6 @@ class Player:
                 score_game=[],
                 score_after_last_game=0,
                 opponent=[],
-                ranking=0,
                 gender="",
                 birth="",
                 name_elo="",
