@@ -9,7 +9,7 @@
 
 ### a) The main.py file:
 >This is the main program, it manages the execution and the order of the various events.
-> The overriding design goal for Markdown's 
+
 ### b) The Chessplayers class:
 >It creates a list of instances of the Chessplayers class.
 >The list is sorted by descending order.
