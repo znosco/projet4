@@ -2,18 +2,18 @@
 
 ## 1) Presentation:
 
->The goal of this project is to create a chess tournament with any number of players (even or odd) and any rounds.
->By trying to be as close to reality as possible.
+> The goal of this project is to create a chess tournament with any number of players (even or odd) and any rounds.
+> By trying to be as close to reality as possible.
 
 ## 2) The different classes / files and their functions:
 
 ### a) The main.py file:
->This is the main program, it manages the execution and the order of the various events.
+> This is the main program, it manages the execution and the order of the various events.
  
 ### b) The Chessplayers class:
->It creates a list of instances of the Chessplayers class.
->The list is sorted by descending order.
->Attributes :
+> It creates a list of instances of the Chessplayers class.
+> The list is sorted by descending order.
+> Attributes :
 - name
 - elo (ranking that reflects the strength of the player)
 - score_game
