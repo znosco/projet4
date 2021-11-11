@@ -55,15 +55,15 @@ Save tournament data in JSON format.
 
 
 to create the virtual environment(window's users):
-'''sh
+```sh
 python -m venv env
 pip install -r requirements.txt
-'''
+```
 for activate environment use activate.bat(window's users):
-'''sh
+```sh
 env/scripts/activate.bat
-''
+```
 for use the code:
-'''sh
+```sh
 python main.py
-'''
+```
