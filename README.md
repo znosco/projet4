@@ -10,7 +10,7 @@
 ### a) The main.py file:
 >This is the main program, it manages the execution and the order of the various events.
 
-### b) The Chessplayers class:
+### b) The Player class:
 >It creates a list of instances of the Chessplayers class.
 >The list is sorted by descending order.
 >
