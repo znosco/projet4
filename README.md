@@ -25,7 +25,7 @@
 - name_elo
 - rank
 
- ### c) The Rounds class:
+ ### c) The Round class:
 > It manages the pairing of players:
 #### 1st round: The players are matched according to their elo (Swiss system).
 #### Next round: The players are paired:
